@@ -25,7 +25,6 @@ The API will be available at `http://localhost:3000`
 
 ## API Endpoints
 
-### 1. Get All Products
 **GET** `/products`
 
 Returns a list of all products.
