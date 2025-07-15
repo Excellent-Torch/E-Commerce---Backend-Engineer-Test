@@ -31,13 +31,16 @@ The API will be available at `http://localhost:3000`
 Returns a list of all products.
 
 **GET** `/products/:id`
-   Return a single product by ID.
+
+Return a single product by ID.
 
 **GET** `/products?category=Apparel`
-   Filter products by category.
+
+Filter products by category.
 
 **POST** `/products` 
-   Accept a new product and add it to the collection.
+
+Accept a new product and add it to the collection.
 
 ## Sample Requests
 
