@@ -7,7 +7,18 @@ let products = require('./data');
 app.use(express.json());
 
 app.get('/products', (req, res) => {
-    res.json(products);
+// /products  - Get All Products by Default
+// /products?category=... - Filter Products by Category
+  const { category } = req.query;
+
+  if (category) {
+    const filteredProducts = products.filter(
+      p => p.category.toLowerCase() === category.toLowerCase()
+    );
+    return res.json(filteredProducts);
+  }
+
+  res.json(products);
 });
 
 app.listen(PORT, () => {
