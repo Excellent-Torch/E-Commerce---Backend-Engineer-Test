@@ -35,6 +35,26 @@ app.get('/products/:id', (req, res) => {
   res.json(product);
 });
 
+// Bonus one 
+
+app.post("/products", (req, res) => {
+  const { name, category, price } = req.body;
+  if (!name || !category || typeof price !== "number") {
+    return res.status(400).json({ message: "Invalid product data" });
+  }
+  const newProduct = {
+    id: products.length + 1,
+    name,
+    category,
+    price
+  };
+
+  products.push(newProduct);
+  res.status(201).json(newProduct);
+});
+
+
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
