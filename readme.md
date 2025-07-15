@@ -1,4 +1,4 @@
-# Product API Documentation
+# Basic Product API Documentation
 
 ## Overview
 A RESTful API for managing products in an e-commerce platform built with Node.js and Express.js.
@@ -29,6 +29,15 @@ The API will be available at `http://localhost:3000`
 **GET** `/products`
 
 Returns a list of all products.
+
+**GET** `/products/:id`
+   Return a single product by ID.
+
+**GET** `/products?category=Apparel`
+   Filter products by category.
+
+**POST** `/products` 
+   Accept a new product and add it to the collection.
 
 ## Sample Requests
 
